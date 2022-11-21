@@ -1,0 +1,88 @@
+@import url(https://fonts.cdnfonts.com/css/ds-digital);
+
+body{
+    background: #c2c2d6;
+}
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator {
+    border: 2px solid #47476b;
+    padding: 5px;
+    background: black;
+    width: 323px;
+    position: relative;
+}
+
+.formula {
+    min-height: 20px;
+    font-family: 'DS-Digital', serif;
+    font-size: 20px;
+    color: orange;
+    text-align: right;
+    vertical-align: text-top;
+    line-height: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.output {
+    font-size: 29px;
+    font-family: 'DS-Digital', serif;
+    color: white;
+    text-align: right;
+    line-height: 35px;
+}
+
+.buttons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+.button{
+    position: relative;
+    height: 65px;
+    width: 80px;
+    color: white;
+    outline: 1px solid black;
+    border: none;
+    background: #4d4d4d;
+    font-family: 'DS-Digital', monospace;
+    font-size: 30px;
+    cursor: default;
+}
+
+.button:hover {
+    border: 1px solid white;
+    color: black;
+}
+
+#clear,
+#zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+}
+
+#clear {
+    background: rgb(172, 57, 57);
+}
+
+#equals {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    height: 100%;
+    background: rgb(0, 68, 102);
+}
+
+#divide,
+#multiply,
+#subtract,
+#add {
+    background: rgb(102, 102, 102);
+}
