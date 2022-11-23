@@ -1,6 +1,7 @@
 import './App.css';
 import Output from "./components/Output";
 import Button from "./components/Button";
+import {AppContextProvider} from "./context/context";
 
 const buttons = [
     {id: "clear", value: "AC"},
@@ -23,20 +24,24 @@ const buttons = [
 ]
 
 const App = () => {
+
     return (
         <div id="app">
-            <div className="calculator">
-                <Output/>
-                <div className="buttons-wrapper">
-                    {buttons.map((button) =>
-                        <Button
-                            id={button.id}
-                            key={button.id}
-                            value={button.value}
-                        />
-                    )}
+            <AppContextProvider>
+                <div className="calculator">
+                    <Output/>
+                    <div className="buttons-wrapper">
+                        {buttons.map((button) =>
+                            <Button
+                                id={button.id}
+                                key={button.id}
+                                value={button.value}
+                            />
+                        )}
+                    </div>
                 </div>
-            </div>
+                <h5>@p.zaicescu</h5>
+            </AppContextProvider>
         </div>
     );
 };
